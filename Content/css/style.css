@@ -88,7 +88,7 @@ a.active{
 }
 @media(max-width: 359px){
     #intro{
-        padding: 210px 0px 180px;
+        padding: 180px 0px 180px;
     }
     #intro p{
         font-size: 18px;
