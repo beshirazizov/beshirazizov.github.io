@@ -86,15 +86,22 @@ a.active{
         padding: 290px 0px 230px;
     }
 }
-@media(max-width: 359px){
+@media(max-width: 400px){
     #intro{
         padding: 180px 0px 180px;
     }
     #intro p{
-        font-size: 18px;
+        font-size: 19px;
     }
     .navbar-brand h2{
         font-size: 25px;
+    }
+    .inquirymodal{
+        padding: 25px 20px 10px 20px!important;
+    }
+
+    section h2{
+        font-size: 35px!important;
     }
 }
 .c-theme{
