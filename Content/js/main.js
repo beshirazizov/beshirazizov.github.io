@@ -5,31 +5,6 @@ $(document).ready(function () {
     contentWayPoint();
     adaptNav();
 
-    $(".inqbtn").click(function (e) {
-        e.preventDefault();
-        if ($(".inquirymodal").css("display") == 'none') {
-            e.stopPropagation();
-        }
-        $(".inquirymodal").css({
-            "opacity": "0",
-            "display": "block",
-        }).show().animate({ opacity: 1 }, 300)
-    })
-
-    $(".xicon").click(function (e) {
-        $(".inquirymodal").hide();
-    })
-
-    $('html').click(function () {
-        if ($(".inquirymodal").css("display") == 'block') {
-            $(".inquirymodal").hide();
-        }
-    });
-
-    $('.inquirymodal').click(function (event) {
-        event.stopPropagation();
-    });
-
     $(window).scroll(function () {
         adaptNav();
     });
@@ -39,6 +14,7 @@ $(document).ready(function () {
         $('.navbar-collapse').collapse('hide');
         if ($.attr(this, 'href') != "#") {
             $('html, body').animate({
+                navigator.vibrate(40);
                 scrollTop: $($.attr(this, 'href')).offset().top - 60
             }, 500);
         }
@@ -48,47 +24,6 @@ $(document).ready(function () {
         $(this).children(".overlay").animate({ opacity: 1 }, 200);
     }, function () {
         $(this).children(".overlay").animate({ opacity: 0 }, 200);
-    });
-
-    $('#namein').keyup(function () {
-        $('#namein').css("border", "1px solid transparent")
-    })
-    $('#contin').keyup(function () {
-        $('#contin').css("border", "1px solid transparent")
-    })
-    $('#messin').keyup(function () {
-        $('#messin').css("border", "1px solid transparent")
-    })
-
-    $('.sendmess').click(function () {
-
-        var name = $('#namein').val();
-        var contact = $('#contin').val();
-        var message = $('#messin').val();
-
-        if (name && contact && message) {
-            var inq = name + " / " + contact + " / " + message + " / "
-            $.ajax({
-                url: "http://caspiangroup.net/teamapi/sendmailb?inquiry=" + inq,
-                dataType: 'jsonp'
-            });
-            $('#namein').val("");
-            $('#contin').val("");
-            $('#messin').val("");
-            $(".successmess").animate({ opacity: 1 }, 500);
-        }
-        else {
-            navigator.vibrate(150);
-            if (!name) {
-                $('#namein').css("border", "1px solid red")
-            }
-            if (!contact) {
-                $('#contin').css("border", "1px solid red")
-            }
-            if (!message) {
-                $('#messin').css("border", "1px solid red")
-            }
-        }
     });
 });
 
