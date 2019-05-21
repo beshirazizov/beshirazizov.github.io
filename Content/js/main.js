@@ -14,7 +14,6 @@ $(document).ready(function () {
         $('.navbar-collapse').collapse('hide');
         if ($.attr(this, 'href') != "#") {
             $('html, body').animate({
-                navigator.vibrate(40);
                 scrollTop: $($.attr(this, 'href')).offset().top - 60
             }, 500);
         }
