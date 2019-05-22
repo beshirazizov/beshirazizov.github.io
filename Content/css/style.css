@@ -53,10 +53,7 @@ nav a{
     border-bottom: 2px solid transparent;
 }
 .navres{
-    background-color: #1d2dfd;
-    color: white!important;
-    border-radius: 20px;
-    padding: 0px 12px!important;
+    color: #1d2dfd!important;
 }
 .navbar-brand{
     margin-top:10px;
@@ -289,10 +286,6 @@ a.active{
         border: none;
         text-decoration: line-through;
         transition:unset;
-    }
-    .navres{
-        background-color: transparent;
-        color: #1d2dfd!important;
     }
 }
 .animate-box {
