@@ -207,37 +207,6 @@ a.active{
     top: -5px;
     left: -10px;
 }
-.inquirymodal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 450px;
-    border-radius: 5px;
-    z-index: 9000;
-    webkit-box-shadow: 0px 0px 1000px 1200px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 1000px 1200px rgba(0,0,0,0.4);
-    box-shadow: 0px 0px 1000px 1200px rgba(0,0,0,0.4);
-    padding: 35px 35px 10px 35px;
-    background-color: white;
-    display: none;
-}
-.inquirymodal p{
-    text-align: center;
-    font-size: 13px;
-}
-@media (max-width: 575px){
-    .inquirymodal {
-        width: calc(100% - 20px);
-    }
-}
-.inquirymodal .xicon {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    height: 27px;
-    cursor: pointer;
-}
 .contactform input {
     border-radius: 4px;
     background-color: #f5f5f5;
