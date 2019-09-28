@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+    lazyload();
+    
     $(".loader").fadeOut("slow");
     navigationSection();
     contentWayPoint();
